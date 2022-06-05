@@ -1,0 +1,26 @@
+{
+  "name": "proyectoweb",
+  "version": "1.0.0",
+  "description": "Página web para proyecto",
+  "main": "app.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "mongoose": "^6.3.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SamuelReveles/ProyectoWeb.git"
+  },
+  "author": "Samuel Reveles & Miguel Godínez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SamuelReveles/ProyectoWeb/issues"
+  },
+  "homepage": "https://github.com/SamuelReveles/ProyectoWeb#readme"
+}
