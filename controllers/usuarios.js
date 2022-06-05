@@ -125,7 +125,7 @@ const accessCode = (req = request, res = response) => {
     }
     else {
         res.status(401).json({
-            success: true,
+            success: false,
             msg: 'Código equivocado'
         });
     }
