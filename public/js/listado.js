@@ -15,7 +15,7 @@ fetch("http://localhost:8080/api/usuarios", requestOptions)
 
         console.log('Son: ', resultado[0]);
         resultado.forEach(element => {
-            datos.textContent = element.nombre;
+            document.body.innerHTML += `<p>${element.nombre}</p>`;
         });
     })
     .catch(error => console.log('error', error));
@@ -24,6 +24,6 @@ fetch("http://localhost:8080/api/usuarios", requestOptions)
 
 /*  Ejemplo de cómo agregar los elementos con un for
     resultado.forEach(element => {
-            datos.textContent = element.nombre;
-        });
+        document.body.innerHTML += `<p>${element.nombre}</p>`;
+    });
 */
