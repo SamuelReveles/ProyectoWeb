@@ -1,18 +1,14 @@
-class Tecnologia {
+const { Schema, model } = require('mongoose');
 
-    constructor(nombre = '', dominio = 0) {
-        this.nombre = nombre;
-        this.dominio = dominio;
+const TecnologiaSchema = Schema({
+    nombre: {
+        type: String,
+        required: [true, 'El nombre del idioma es obligatorio']
+    },
+    dominio: {
+        type: String,
+        required: [true, 'El dominio de la tecnología es obligatorio']
     }
+});
 
-    setNombre(nombre = '') {
-        this.nombre = nombre;
-    }
-
-    setDominio(dominio = ''){
-        this.dominio = dominio;
-    }
-
-}
-
-module.exports = Tecnologia;
+module.exports = model('Tecnologia', TecnologiaSchema);

@@ -14,7 +14,7 @@ btnCode.onclick = () => {
         .then(response => response.json())
         .then(result => {
             if(result.success === true) {
-                window.location.href = 'http://localhost:8080/html/admin.html';
+                window.location.href = 'http://localhost:8080/html/es/admin.html';
             }
         })
         .catch(error => console.log('error', error));

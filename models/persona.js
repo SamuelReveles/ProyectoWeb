@@ -26,10 +26,13 @@ const PersonaSchema = Schema({
         required: [true, 'La descripción personal es obligatoria']
     },
     tecnologias: [{
-        type: Object
+        type: Schema.ObjectId
     }],
     idiomas: [{
-        type: Object
+        type: Schema.ObjectId
+    }],
+    redes_sociales: [{
+        type: Schema.ObjectId
     }]
 });
 

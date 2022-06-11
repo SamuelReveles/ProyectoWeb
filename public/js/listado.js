@@ -5,6 +5,7 @@ const requestOptions = {
 
 let resultado = [];
 datos = document.getElementById('data');
+container = document.getElementById('container');
 
 fetch("http://localhost:8080/api/usuarios", requestOptions)
     .then(response => response.json())
@@ -15,15 +16,17 @@ fetch("http://localhost:8080/api/usuarios", requestOptions)
 
         console.log('Son: ', resultado[0]);
         resultado.forEach(element => {
-            document.body.innerHTML += `<p>${element.nombre}</p>`;
+            container.innerHTML += `<div class="Tarjeta">
+                                        <h3>${element.nombre + ' ' +element.apellidos}</h3>
+                                        <p>${element.descripcion}</p>
+                                        <br>
+                                        <button class="btn btn-warning" onclick="verCV('${element._id}');">Obtener CV</button>
+                                    </div>
+                                    <br>`;
         });
     })
     .catch(error => console.log('error', error));
 
-//Arreglo con resultados guardado en resultado
-
-/*  Ejemplo de cómo agregar los elementos con un for
-    resultado.forEach(element => {
-        document.body.innerHTML += `<p>${element.nombre}</p>`;
-    });
-*/
+function verCV(id) {
+    console.log('Aquí es donde aparecerá el PDF de ' + id);
+}

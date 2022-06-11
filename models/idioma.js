@@ -1,18 +1,14 @@
-class Idioma {
+const { Schema, model } = require('mongoose');
 
-    constructor(nombre = '', nivel = '') {
-        this.nombre = nombre;
-        this.nivel = nivel;
+const IdiomaSchema = Schema({
+    nombre: {
+        type: String,
+        required: [true, 'El nombre del idioma es obligatorio']
+    },
+    nivel: {
+        type: String,
+        required: [true, 'El nivel del idioma es obligatorio']
     }
+});
 
-    setNombre(nombre = ''){
-        this.nombre = nombre;
-    }
-
-    setNivel(nivel = ''){
-        this.nivel = nivel;
-    }
-
-}
-
-module.exports = Idioma;
+module.exports = model('Idioma', IdiomaSchema);

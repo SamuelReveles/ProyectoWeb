@@ -1,0 +1,100 @@
+.tarjeta {
+    background: rgb(145, 145, 145);
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 30%;
+    height: 200px;
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+    padding: 15px;
+    box-shadow: 3px 3px 3px black;
+}
+
+h1 {
+    font-size: 50px;
+    padding: 15px;
+}
+
+body {
+    background: rgb(57,221,117);
+    background: linear-gradient(240deg, rgba(57,221,117,1) 17%, rgba(113,219,238,1) 83%);
+}
+
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: #4d4d4d;        /* color of the tracking area */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: rgb(238, 204, 66);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid #4d4d4d;   /* creates padding around scroll thumb */
+}
+
+#dato {
+    font-size: 20px;
+    display: inline;
+}
+
+.acerca-de{
+    margin: 20px;
+    margin-left: 80px;
+    width: 450px;
+    text-align: justify;
+    margin-top: 30px;
+    display: flex;
+}
+
+#titulo {
+    text-align: center;
+    color: white;
+}
+
+#quesomos {
+    width: 500px;
+    height: auto;
+}
+
+#queso-mos {
+    margin-top: 150px;
+    margin-left: 120px;
+    color: rgb(255, 255, 255);
+    font-size: 30px;
+    font-style: italic;
+    background-color: rgba(67, 67, 67, 0.814);
+    padding: 15px;
+    height: 600px;
+    border-radius: 10px;
+}
+
+#videopre {
+    margin-left: 120px;
+    border-radius: 10px;
+    margin-top: 50px;
+}
+
+.datos_contacto {
+    width: 600px;
+    display: inline;
+}
+
+.contacto {
+    text-align: center;
+    font-size: 30px;
+}
+
+.content {
+    text-align: center;
+}
+
+#abtus {
+    background-image: url(../src/CVOMG-FONDO.png);
+}
+
+.main {
+    margin: 0 auto;
+}
