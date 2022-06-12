@@ -39,26 +39,27 @@ const getPersona = async(req = request, res = response) => {
 const postPersona = async(req = request, res = response) => {
     try {
         const {
+            id,
             nombre,
-            apellidos,
+            apellido,
             celular,
             correo,
-            fecha_nacimiento,
+            //fecha_nacimiento,
             descripcion,
-            // tecnologias,
-            // idiomas
+            tecnologias = '',
+            idiomas = ''
         } = req.body;
 
-        const persona = new Persona({
+        const persona = {
             nombre,
-            apellidos,
+            apellido,
             celular,
             correo,
             fecha_nacimiento: new Date(),
             descripcion,
-            tecnologias: [],
-            idiomas: []
-        });
+            tecnologias,
+            idiomas
+        };
 
         await persona.save();
 
@@ -82,10 +83,10 @@ const putPersona = async(req = request, res = response) => {
             apellido,
             celular,
             correo,
-            fecha_nacimiento,
+            //fecha_nacimiento,
             descripcion,
-            tecnologias,
-            idiomas
+            tecnologias = '',
+            idiomas = ''
         } = req.body;
 
         const persona = {
@@ -93,7 +94,7 @@ const putPersona = async(req = request, res = response) => {
             apellido,
             celular,
             correo,
-            fecha_nacimiento,
+            fecha_nacimiento: new Date(),
             descripcion,
             tecnologias,
             idiomas
@@ -131,10 +132,22 @@ const accessCode = (req = request, res = response) => {
     }
 }
 
+const deletePersona = async(req = request, res = response) => {
+    const id = req.body.id;
+
+    await Persona.findOneAndDelete(id);
+
+    res.status(201).json({
+        success: true,
+        msg: 'Se ha borrado a ' + id
+    });
+}
+
 module.exports = {
     getPersonas, 
     getPersona,
     postPersona,
     putPersona,
-    accessCode
+    accessCode,
+    deletePersona
 }

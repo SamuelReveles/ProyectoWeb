@@ -1,4 +1,3 @@
-
 //Parte de código de admin
 const btnCode = document.getElementById('btn-code');
 
@@ -14,7 +13,7 @@ btnCode.onclick = () => {
         .then(response => response.json())
         .then(result => {
             if(result.success === true) {
-                window.location.href = 'http://localhost:8080/html/es/admin/admin.html';
+                window.location.href = 'http://localhost:8080/html/en/admin/admin.html';
             }
         })
         .catch(error => console.log('error', error));

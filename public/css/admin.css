@@ -1,0 +1,31 @@
+h1 {
+    margin-top: 100px;
+    color: white;
+    text-align: center;
+}
+ 
+body {
+    background-color: rgb(61, 61, 61);
+}
+
+#menu {
+    margin-left: 40%;
+    margin-top: 100px;
+}
+
+button {
+    margin-left: 40px;
+}
+
+.tarjeta {
+    background: rgb(145, 145, 145);
+    border-radius: 10px;
+    border: 2px solid black;
+    width: 30%;
+    height: 200px;
+    text-align: center;
+    color: white;
+    margin: 0 auto;
+    padding: 15px;
+    box-shadow: 3px 3px 3px black;
+}

@@ -95,6 +95,31 @@ body::-webkit-scrollbar-thumb {
     background-image: url(../src/CVOMG-FONDO.png);
 }
 
-.main {
-    margin: 0 auto;
+#explicacion {
+    margin: 40px;
+    margin-top: 50px;
+    margin-left: 500px;
+    border-radius: 10px;
+    border-color: 3px rgb(52, 52, 52) solid;
+    display: flex;
+}
+
+.explain {
+    margin-top: 5px;
+    padding-left: 10px;
+    width: 600px;
+    font-size: 30px;
+}
+
+.vid {
+    margin-left: 680px;
+}
+
+#CVS {
+    margin-left: 850px;
+    margin-top: 50px;
+    background-color: #deff3b1a;
+    border-radius: 10px;
+    border-color: 3px black solid;
+    height: 50px;
 }

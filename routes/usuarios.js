@@ -6,7 +6,8 @@ const {
     getPersona,
     postPersona,
     putPersona,
-    accessCode
+    accessCode,
+    deletePersona
 } = require('../controllers/usuarios');
 
 const router = new Router();
@@ -25,5 +26,7 @@ router.put('/', putPersona);
 
 //Acceder a admin
 router.get('/code', accessCode);
+
+router.delete('/', deletePersona)
 
 module.exports = router;
