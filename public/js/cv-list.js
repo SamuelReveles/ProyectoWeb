@@ -1,15 +1,9 @@
-const requestOptions = {
-    method: 'DELETE',
-    redirect: 'follow'
-};
-
 const requestOptions_Get = {
     method: 'GET',
     redirect: 'follow'
 };
 
 let resultado = [];
-datos = document.getElementById('data');
 container = document.getElementById('container');
 
 fetch("http://localhost:8080/api/usuarios", requestOptions_Get)
@@ -25,8 +19,7 @@ fetch("http://localhost:8080/api/usuarios", requestOptions_Get)
                                         <h3>${element.nombre + ' ' +element.apellidos}</h3>
                                         <p>${element.descripcion}</p>
                                         <br>
-                                        <button class="btn btn-danger" onclick="deleteCV('${element._id}');">Delete CV</button>
-                                        <button class="btn btn-warning" onclick="editCV('${element._id}');">Edit CV</button>
+                                        <button class="btn btn-danger" id="botonsito" onclick="deleteCV('${element._id}');">Delete CV</button>
                                     </div>
                                     <br>`;
         });
@@ -34,5 +27,16 @@ fetch("http://localhost:8080/api/usuarios", requestOptions_Get)
     .catch(error => console.log('error', error));
 
 function deleteCV(id) {
-    console.log('Aquí es donde aparecerá el PDF de ' + id);
+    var requestOptions_Delete = {
+        method: 'DELETE',
+        redirect: 'follow'
+      };
+      
+      fetch("http://localhost:8080/api/usuarios/", requestOptions_Delete)
+        .then(response => response.text())
+        .then(result => {
+            console.log(result);
+            location.reload();
+        })
+        .catch(error => console.log('error', error));
 }

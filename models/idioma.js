@@ -4,10 +4,6 @@ const IdiomaSchema = Schema({
     nombre: {
         type: String,
         required: [true, 'El nombre del idioma es obligatorio']
-    },
-    nivel: {
-        type: String,
-        required: [true, 'El nivel del idioma es obligatorio']
     }
 });
 

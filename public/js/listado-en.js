@@ -28,5 +28,5 @@ fetch("http://localhost:8080/api/usuarios", requestOptions)
     .catch(error => console.log('error', error));
 
 function verCV(id) {
-    console.log('Aquí es donde aparecerá el PDF de ' + id);
+    window.location.replace(`http://localhost:8080/api/usuarios/persona?id=${id}&lang=en`);
 }

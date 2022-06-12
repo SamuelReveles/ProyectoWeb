@@ -25,15 +25,15 @@ const PersonaSchema = Schema({
         type: String,
         required: [true, 'La descripción personal es obligatoria']
     },
-    tecnologias: [{
+    tecnologias: {
         type: Schema.ObjectId
-    }],
-    idiomas: [{
+    },
+    idiomas: {
         type: Schema.ObjectId
-    }],
-    redes_sociales: [{
+    },
+    redes_sociales: {
         type: Schema.ObjectId
-    }]
+    }
 });
 
 module.exports = model('Persona', PersonaSchema);
